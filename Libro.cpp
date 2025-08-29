@@ -1,16 +1,12 @@
+#include "Libro.h"
 #include <iostream>
 
-class Libro{
-private:
- std::string titulo;
- std::string autor;
- int anio;
+Book::Book(
+  const std::string& title, const std:: string& author, const int year)
+  :title(title), author(author), year(year){}
 
-public:
-Libro(const std::string titulo_, std::string autor, int anio_):titulo(titulo_), autor(autor_), anio(anio_){}
-}
-void mostrarInformacion(const std::string titulo_, std:string autor_, int anio_){
-std::cout<< titulo_ << std::endl;
-std::cout<<autor_ << std:: endl;
-std::cout<<anio: << std::endl;
+void Book::show_info(){
+  std::cout << "title: " << title << std::endl;
+  std::cout << "author: " << author << std::endl;
+  std::cout << "year: " << year << std::endl;
 }
